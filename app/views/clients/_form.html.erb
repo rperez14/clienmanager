@@ -1,0 +1,6 @@
+<%= simple_form_for @client do |f| %>
+  <%= f.input :first_name,  label: "First Name" %>
+  <%= f.input :last_name ,  label: "Last Name" %>
+  <%= f.input :last_four ,  label: "First 4 of SSN" %>
+  <%= f.button :submit %>
+<% end %>

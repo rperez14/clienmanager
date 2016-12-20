@@ -1,0 +1,19 @@
+
+<div class="container">
+    <h2>Listing of Clients</h2>
+        <table class="table table-striped">
+              <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>SSN Last 4</th>
+             </tr>
+         
+        <% @clients.each do |client| %>
+              <tr>
+                <td><%= client.first_name %></td> 
+                <td><%= link_to client.last_name, client_path(client) %></td> <!-- I was able to make the table column clickable with this-->
+                <td><%= client.last_four %></td>
+            </tr>
+        <% end %>
+        </table>
+</div>        
